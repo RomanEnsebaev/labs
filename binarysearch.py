@@ -1,4 +1,5 @@
 def bin_search(nums:list, target:int):
+    """ list - numbers array, target - desired number"""
     if len(nums)==0:
         return "Empty array"
     l=0
