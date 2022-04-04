@@ -65,23 +65,23 @@ void MainWindow::mousePressEvent(QMouseEvent *ev)
       next = current;
 }
 
-void MainWindow::mouseReleaseEvent(QMouseEvent *ev) { //Событие отпускания зажатой кнопки мыши, отрисовываем примитивы
+void MainWindow::mouseReleaseEvent(QMouseEvent *ev) { //Событие отпускания зажатой кнопки мыши, отрисовка примитивов
   isPressed = false;
   next = ev->pos() - ui->scrollArea->geometry().topLeft() +
          QPoint(ui->scrollArea->horizontalScrollBar()->value(),
                 ui->scrollArea->verticalScrollBar()->value());
 }
 
-void MainWindow::newFile() { loadFile("d:\\img.jpg"); } //Новый файл, открываем файл шаблона
+void MainWindow::newFile() { loadFile("d:\\img.jpg"); } //Новый файл
 
-void MainWindow::open() { //Открыть файл, открываем диалог, выбираем файл
+void MainWindow::open() { //Открыть файл
   const QString fileName = QFileDialog::getOpenFileName(
       this, tr("Открыть файл"), QDir::currentPath());
   if (!fileName.isEmpty())
     loadFile(fileName);
 }
 
-bool MainWindow::save() { //Сохранение, открываем диалог, показываем, куда сохранять
+bool MainWindow::save() { //Сохранение
     const QString initialPath = QDir::currentPath() + "/untitled.jpg";
 
     const QString fileName =
