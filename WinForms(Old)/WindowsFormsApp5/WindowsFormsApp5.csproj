@@ -1,0 +1,228 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{DF3A446C-82D2-49A0-9435-8B5BEDD94A05}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>WindowsFormsApp5</RootNamespace>
+    <AssemblyName>WindowsFormsApp5</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="apartment.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="apartment.Designer.cs">
+      <DependentUpon>apartment.cs</DependentUpon>
+    </Compile>
+    <Compile Include="apartred.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="apartred.Designer.cs">
+      <DependentUpon>apartred.cs</DependentUpon>
+    </Compile>
+    <Compile Include="clientred.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="clientred.Designer.cs">
+      <DependentUpon>clientred.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ds.cs">
+      <DependentUpon>ds.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="ds.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ds.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="clientt.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="clientt.Designer.cs">
+      <DependentUpon>clientt.cs</DependentUpon>
+    </Compile>
+    <Compile Include="employee.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="employee.Designer.cs">
+      <DependentUpon>employee.cs</DependentUpon>
+    </Compile>
+    <Compile Include="emplred.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="emplred.Designer.cs">
+      <DependentUpon>emplred.cs</DependentUpon>
+    </Compile>
+    <Compile Include="menu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="menu.Designer.cs">
+      <DependentUpon>menu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="pact.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="pact.Designer.cs">
+      <DependentUpon>pact.cs</DependentUpon>
+    </Compile>
+    <Compile Include="pactred.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="pactred.Designer.cs">
+      <DependentUpon>pactred.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="zapr1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="zapr1.Designer.cs">
+      <DependentUpon>zapr1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="zapr2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="zapr2.Designer.cs">
+      <DependentUpon>zapr2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="zapr3.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="zapr3.Designer.cs">
+      <DependentUpon>zapr3.cs</DependentUpon>
+    </Compile>
+    <Compile Include="zapr4.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="zapr4.Designer.cs">
+      <DependentUpon>zapr4.cs</DependentUpon>
+    </Compile>
+    <Compile Include="zapr5.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="zapr5.Designer.cs">
+      <DependentUpon>zapr5.cs</DependentUpon>
+    </Compile>
+    <Compile Include="zapr6.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="zapr6.Designer.cs">
+      <DependentUpon>zapr6.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="apartment.resx">
+      <DependentUpon>apartment.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="apartred.resx">
+      <DependentUpon>apartred.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="clientt.resx">
+      <DependentUpon>clientt.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="clientred.resx">
+      <DependentUpon>clientred.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="employee.resx">
+      <DependentUpon>employee.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="emplred.resx">
+      <DependentUpon>emplred.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="menu.resx">
+      <DependentUpon>menu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="pact.resx">
+      <DependentUpon>pact.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="pactred.resx">
+      <DependentUpon>pactred.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="zapr1.resx">
+      <DependentUpon>zapr1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="zapr2.resx">
+      <DependentUpon>zapr2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="zapr3.resx">
+      <DependentUpon>zapr3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="zapr4.resx">
+      <DependentUpon>zapr4.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="zapr5.resx">
+      <DependentUpon>zapr5.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="zapr6.resx">
+      <DependentUpon>zapr6.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="ds.xsc">
+      <DependentUpon>ds.xsd</DependentUpon>
+    </None>
+    <None Include="ds.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ds.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="ds.xss">
+      <DependentUpon>ds.xsd</DependentUpon>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
