@@ -11,24 +11,24 @@ MainWindow::MainWindow(QWidget *parent) :
     ui(new Ui::MainWindow)
 {
     ui->setupUi(this);
-    label = new QLabel(ui->scrollArea); //Метку
-    label->setAlignment(Qt::AlignTop); //Выравниваем содержимое
+    label = new QLabel(ui->scrollArea); 
+    label->setAlignment(Qt::AlignTop); 
     ui->scrollArea->setWidget(label);
-    createActions(); //Создаем меню
-    repaint(); //Перерисовываем
-    instrument = 1; //Выбираем карандаш
-    color.setRgb(0, 0, 0); //Черный цвет
+    createActions(); 
+    repaint(); 
+    instrument = 1; 
+    color.setRgb(0, 0, 0); 
 
-    widthOfPen = 5; //Ставим ширину кисти
+    widthOfPen = 5; 
 
-    newFile(); //Новый файл
+    newFile(); 
 }
 
 
-void MainWindow::paintEvent(QPaintEvent *) { //Отрисовка (событие)
-  if (instrument == 1) { //Если карандаш выбран
-    if (isPressed) { //Если кнопка зажата
-      painter.begin(&img); //Рисуем по координатам
+void MainWindow::paintEvent(QPaintEvent *) { 
+  if (instrument == 1) { 
+    if (isPressed) { 
+      painter.begin(&img); 
       painter.setPen(QPen(color, widthOfPen, Qt::SolidLine));
       painter.drawLine(current, next);
       painter.end();
@@ -38,7 +38,7 @@ void MainWindow::paintEvent(QPaintEvent *) { //Отрисовка (событи�
   }
 }
 
-void MainWindow::mouseMoveEvent(QMouseEvent *ev) { //Событие движения курсора, расчет координат под курсором
+void MainWindow::mouseMoveEvent(QMouseEvent *ev) { 
   next = ev->pos() - ui->scrollArea->geometry().topLeft() +
          QPoint(ui->scrollArea->horizontalScrollBar()->value(),
                 ui->scrollArea->verticalScrollBar()->value());
@@ -47,8 +47,8 @@ void MainWindow::mouseMoveEvent(QMouseEvent *ev) { //Событие движен
 
 void MainWindow::pen() { instrument = 1; }
 
-void MainWindow::setColor() { //Выбор цвета
-  const QColor newColor = QColorDialog::getColor(color); //Диалог выбора цвета
+void MainWindow::setColor() { 
+  const QColor newColor = QColorDialog::getColor(color); 
   if (newColor.isValid()) {
     color = newColor; //Ставим цвет, если он валидный
 
@@ -65,14 +65,14 @@ void MainWindow::mousePressEvent(QMouseEvent *ev)
       next = current;
 }
 
-void MainWindow::mouseReleaseEvent(QMouseEvent *ev) { //Событие отпускания зажатой кнопки мыши, отрисовка примитивов
+void MainWindow::mouseReleaseEvent(QMouseEvent *ev) { 
   isPressed = false;
   next = ev->pos() - ui->scrollArea->geometry().topLeft() +
          QPoint(ui->scrollArea->horizontalScrollBar()->value(),
                 ui->scrollArea->verticalScrollBar()->value());
 }
 
-void MainWindow::newFile() { loadFile("d:\\img.jpg"); } //Новый файл
+void MainWindow::newFile() { loadFile("d:\\img.jpg"); } 
 
 void MainWindow::open() { //Открыть файл
   const QString fileName = QFileDialog::getOpenFileName(
@@ -81,7 +81,7 @@ void MainWindow::open() { //Открыть файл
     loadFile(fileName);
 }
 
-bool MainWindow::save() { //Сохранение
+bool MainWindow::save() { 
     const QString initialPath = QDir::currentPath() + "/untitled.jpg";
 
     const QString fileName =
@@ -91,14 +91,14 @@ bool MainWindow::save() { //Сохранение
 }
 
 
-void MainWindow::loadFile(const QString &fileName) { //Загрузка файла
+void MainWindow::loadFile(const QString &fileName) { 
   if (!fileName.isEmpty()) {
     img.load(fileName);
     label->setPixmap(img);
   }
 }
 
-void MainWindow::createActions() { //Создаем меню "Файл"
+void MainWindow::createActions() {
   QMenu *fileMenu = menuBar()->addMenu(tr("&Файл"));
   QAction *newAct = fileMenu->addAction(tr("&Новый файл"));
   newAct->setShortcuts(QKeySequence::New);
