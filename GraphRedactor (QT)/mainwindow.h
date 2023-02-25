@@ -14,41 +14,41 @@ class MainWindow : public QMainWindow
 {
     Q_OBJECT
 
-    QPixmap img; //Изображение и его временная копия
+    QPixmap img; 
     QPixmap imgTmp;
-    bool isPressed; //Нажата ли кнопка мыши
-    QPointF current; //Различные точки, необходимые для отрисовки
+    bool isPressed; 
+    QPointF current; 
     QPointF next;
     QPointF currentTmp;
-    QLabel *label; //Метка, в которой отображается рисунок
-    int instrument; //Выбранный инструмент
-    QColor color; //Цвет
-    QPainter painter; //Объект, который занимается отрисовкой
-    int widthOfPen; //Ширина кисти
+    QLabel *label; 
+    int instrument; 
+    QColor color; 
+    QPainter painter; 
+    int widthOfPen; 
 
 protected:
-    void paintEvent(QPaintEvent *); //Событие рисования
-    void mouseMoveEvent(QMouseEvent *ev); //Движения курсора
-    void mousePressEvent(QMouseEvent *ev); //Нажатия на кнопку мыши
-    void mouseReleaseEvent(QMouseEvent *ev); //Отпускания зажатой кнопки мыши
+    void paintEvent(QPaintEvent *); 
+    void mouseMoveEvent(QMouseEvent *ev); 
+    void mousePressEvent(QMouseEvent *ev); 
+    void mouseReleaseEvent(QMouseEvent *ev); 
 
 
 private:
-  Ui::MainWindow *ui; //Интерфейс
-  void createActions(); //Метод создания меню
-  void loadFile(const QString &fileName); //Метод загрузки файла по пути
+  Ui::MainWindow *ui; 
+  void createActions(); 
+  void loadFile(const QString &fileName); 
 
 
 public slots:
-  void newFile(); //Новый файл
-  void open(); //Открытие
-  bool save(); //Сохранение
-  void pen(); //Выбор кисти
-  void setColor(); //Выбор цвета
+  void newFile(); 
+  void open(); 
+  bool save(); 
+  void pen(); 
+  void setColor(); 
 public:
-  explicit MainWindow(QWidget *parent = 0); //Конструктор
+  explicit MainWindow(QWidget *parent = 0);
   ~MainWindow();
 
 };
 
-#endif // MAINWINDOW_H
+#endif 
